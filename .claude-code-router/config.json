@@ -1,0 +1,47 @@
+{
+  "Providers": [
+  	{
+      "name": "qianduoduo",
+      "api_base_url": "https://api2.aigcbest.top/v1/chat/completions",
+      "api_key": "sk-",
+      "models": [
+        "gpt-4o",
+        "gpt-4o-mini",
+        "claude-3-7-sonnet-latest",
+        "claude-3-7-sonnet-thinking",
+        "claude-opus-4-20250514",
+        "claude-sonnet-4-20250514",
+        "deepseek-ai/DeepSeek-R1-0528"
+      ],
+      "transformer": {
+        "use": ["openai"]
+      }
+    },
+    {
+      "name": "openrouter",
+      "api_base_url": "https://openrouter.ai/api/v1/chat/completions",
+      "api_key": "sk-or-v1-",
+      "models": [
+        "deepseek/deepseek-r1-0528:free"
+      ],
+      "transformer": {
+        "use": ["openrouter"]
+      }
+    },
+    {
+      "name": "gemini",
+      "api_base_url": "https://api2.aigcbest.top/v1/chat/completions",
+      "api_key": "sk-",
+      "models": ["gemini-2.5-flash", "gemini-2.5-pro-preview-06-05"],
+      "transformer": {
+        "use": ["gemini"]
+      }
+    }
+  ],
+  "Router": {
+    "default": "qianduoduo,claude-sonnet-4-20250514",
+    "background": "qianduoduo,gpt-4o-mini",
+    "think": "qianduoduo,deepseek-ai/DeepSeek-R1-0528",
+    "longContext": "gemini,gemini-2.5-pro-preview-06-05"
+  }
+}

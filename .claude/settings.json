@@ -1,0 +1,8 @@
+{
+  "env": {
+    "ANTHROPIC_API_KEY": "sk-",
+    "ANTHROPIC_BASE_URL": "",
+    "HTTP_PROXY": "http://127.0.0.1:8080",
+    "HTTPS_PROXY": "http://127.0.0.1:8080"
+  }
+}
